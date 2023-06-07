@@ -9,7 +9,8 @@ pipeline {
     stage('Task2') {
       steps {
         bat 'python Task2.py'
-        readFile 'result.txt'
+        def data = readFile(file: 'result.txt')
+                   println(data)
       }
     }
   }
