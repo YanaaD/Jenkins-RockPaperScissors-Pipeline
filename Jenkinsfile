@@ -9,7 +9,7 @@ pipeline {
     stage('Task2') {
       steps {
         bat 'python Task2.py'
-        type 'result.txt'
+         type 'result.txt'
       }
     }
   }
