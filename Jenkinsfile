@@ -10,7 +10,7 @@ pipeline {
       steps {
         bat 'python Task2.py'
         def data = readFile(file: 'result.txt')
-                   println(data)
+        println(data)
       }
     }
   }
