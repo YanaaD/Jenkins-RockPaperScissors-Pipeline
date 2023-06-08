@@ -1,9 +1,9 @@
+import random
 def read_file_input(*, filename:str):
     with open(filename, "r") as file:
         moves = file.readlines()
         # clean \n char
         moves = [ m.replace('\n','') for m in moves]
-    
     return moves
 
 def play_hand(*, player1_move: str, player2_move: str):
@@ -28,6 +28,8 @@ if __name__ == "__main__":
     # ['R', 'S',...]
     player1_moves = read_file_input(filename="player1.txt")
     player2_moves = read_file_input(filename="player2.txt")
+    random.shuffle(player1_moves)
+    random.shuffle(player2_moves)
 
     if len(player1_moves) != len(player2_moves):
         raise ValueError("Mismatch in number of moves")
