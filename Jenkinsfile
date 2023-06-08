@@ -9,7 +9,6 @@ pipeline {
     stage('Task2') {
       steps {
         bat 'python Task2.py'
-        readFile 'result.txt'
       }
     }
   }
