@@ -44,4 +44,5 @@ if __name__ == "__main__":
         sumup[result] = sumup[result] + 1
     
     write_output(filename="result.txt", content=sumup)
-    print(result.txt)
+    results = read_file_input(filename="results.txt")
+    print(results)
